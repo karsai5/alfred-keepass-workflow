@@ -88,7 +88,7 @@ def addItemDetails(process):
             username = ":".join(line.split(":")[1:]).strip()
     argument = path + name
 
-    process.sendline("show -f " + argument)
+    process.sendline("show -f " + argument.replace(" ", "\ "))
 
     process.expect("kpcli:/>")
     
