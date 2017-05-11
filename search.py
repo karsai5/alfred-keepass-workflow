@@ -13,18 +13,19 @@ from workflow import Variables
 
 DEBUG = False
 DBLOCATION = os.getenv('dblocation', 'default_value')
+KEYCHAIN_NAME = os.getenv('keychain_name', 'alfred-keepass-pass')
 
 def main(wf):
 
     args = wf.args
     kpcliCommand= "/usr/local/bin/kpcli --kdb " + DBLOCATION
     try:
-        password = wf.get_password('alfred-keepass-pass')
+        password = wf.get_password(KEYCHAIN_NAME)
     except Exception as e:
-        wf.save_password('alfred-keepass-pass', 'password') 
+        wf.save_password(KEYCHAIN_NAME, 'password') 
         wf.add_item("Password not found")
         wf.add_item("Open up keychain")
-        wf.add_item("Search for alfred-keepass-pass")
+        wf.add_item("Search for %s" % KEYCHAIN_NAME )
         wf.add_item("Update your password")
         wf.send_feedback()
 
@@ -50,6 +51,7 @@ def main(wf):
 
     index = process.expect(["matches found", "No matches"])
 
+    # matches found
     if index == 0:
         itemNames = []
         process.sendline("n")
@@ -65,6 +67,7 @@ def main(wf):
             process.expect("kpcli:/>")
             addItemDetails(process)
 
+    # no matches found...
     elif index == 1:
         wf.add_item("No results found...")
 
