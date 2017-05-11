@@ -11,7 +11,9 @@ Alfred workflow for accessing Keepass items.
 1. Grab the latest .alfredworkflowfile from the [releases page](https://github.com/karsai5/KeePass-Alfred-Workflow/releases).
 2. Install it by dragging and drop it into the workflow tab of Alfred's preferences.
 3. Set the db location by typing "pass-set-dblocation <database location>" into Alfred.
+![Set database location](https://github.com/karsai5/KeePass-Alfred-Workflow/blob/images/set-db.png?raw=true)
 4. Set your master password by typing pass-set-password <password> into Alfred.
+![Set master password](https://github.com/karsai5/KeePass-Alfred-Workflow/blob/images/set-password.png?raw=true)
 
 ## Lots of thanks!
 This project wouldn't be possible without the following:
