@@ -18,7 +18,7 @@ KEYCHAIN_NAME = os.getenv('keychain_name', 'alfred-keepass-pass')
 def main(wf):
 
     args = wf.args
-    kpcliCommand= "/usr/local/bin/kpcli --kdb " + DBLOCATION
+    kpcliCommand= "./kpcli/bin/kpcli --kdb " + DBLOCATION
     try:
         password = wf.get_password(KEYCHAIN_NAME)
     except Exception as e:
@@ -34,20 +34,23 @@ def main(wf):
     if DEBUG: 
         process.logfile = open("/tmp/mylog", "w")
 
-    result = process.expect(["Please provide the master password", "the file must exist"])
+    result = process.expect(["Please provide the master password", "the file must exist", pexpect.EOF])
     if result == 0:
         process.sendline(password)
     else: 
         wf.add_item("Can't find database, check config.")
         wf.send_feedback()
+        sys.exit()
 
-    result = process.expect(["kpcli:/>", "invalid"])
+    result = process.expect(["kpcli:/>", "invalid", pexpect.EOF])
+
     if result == 0:
         process.sendline("find " + args[0].replace(" ", "\ "))
     else:
         wf.add_item("Couldn't access database")
         wf.add_item("Check config and password")
         wf.send_feedback()
+        sys.exit()
 
     index = process.expect(["matches found", "No matches"])
 

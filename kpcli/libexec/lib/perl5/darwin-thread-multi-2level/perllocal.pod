@@ -1,0 +1,198 @@
+=head2 Wed Sep 28 20:41:41 2016: C<Module> L<File::KeePass|File::KeePass>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.03>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:42 2016: C<Module> L<Crypt::Rijndael|Crypt::Rijndael>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.13>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:42 2016: C<Module> L<Sort::Naturally|Sort::Naturally>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.03>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:43 2016: C<Module> L<Term::ShellUI|Term::ShellUI>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.92>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:43 2016: C<Module> L<Data::Password|Data::Password>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.12>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:44 2016: C<Module> L<Clipboard|Clipboard>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.13>
+
+=item *
+
+C<EXE_FILES: scripts/clipjoin scripts/clipedit scripts/clipbrowse scripts/clipaccumulate scripts/clipfilter>
+
+=back
+
+=head2 Wed Sep 28 20:41:46 2016: C<Module> L<Mac::Pasteboard|Mac::Pasteboard>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.008>
+
+=item *
+
+C<EXE_FILES: bin/pbtool>
+
+=back
+
+=head2 Wed Sep 28 20:41:47 2016: C<Module> L<Capture::Tiny|Capture::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.44>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Wed Sep 28 20:41:50 2016: C<Module> L<Term::ReadLine::Gnu|Term::ReadLine::Gnu>
+
+=over 4
+
+=item *
+
+C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.34>
+
+=item *
+
+C<EXE_FILES: eg/perlsh>
+
+=back
+
