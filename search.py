@@ -6,11 +6,13 @@ import sys
 import base64
 import pexpect
 import re
+import os
 import json
-from workflow import Workflow, ICON_WEB, web
+from workflow import Workflow3, ICON_WEB, web
+from workflow import Variables
 
-DEBUG = True
-DBLOCATION = "/Users/lkarsai/Documents/thoughtworks.kdbx"
+DEBUG = False
+DBLOCATION = os.getenv('dblocation', 'default_value')
 
 def main(wf):
 
@@ -99,5 +101,5 @@ def addItemDetails(process):
     wf.add_item(title=name, subtitle="Username: " + username, copytext=password, largetext=password, arg = password, valid=True)
 
 if __name__ == u"__main__":
-    wf = Workflow()
+    wf = Workflow3()
     sys.exit(wf.run(main))
