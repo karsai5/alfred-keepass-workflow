@@ -16,3 +16,9 @@ Alfred workflow for accessing Keepass items.
 6. It'll complain about not having a password. Open up Keychain (/Applications/Utilities/Keychain Access) and search for "alfred-keepass-pass".
 7. Open that entry and update it with the master password for your keepass db.
 8. Try searching for a password again, it'll ask for access to your keychain, click always allow.
+
+## Lots of thanks!
+This project wouldn't be possible without the following:
+
+- [kpcli by Lester Hightower](http://kpcli.sourceforge.net/): A command line application for accessing keepass database files.
+- [Alfred-workflow](https://github.com/deanishe/alfred-workflow): A helper library in Python for authors of workflows for Alfred 2 and 3.
