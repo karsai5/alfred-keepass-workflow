@@ -278,6 +278,13 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<integer>60</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>dblocation</key>
+		<string>/Users/lkarsai/Documents/thoughtworks.kdbx</string>
+		<key>keychain_name</key>
+		<string>alfred-keepass-pass</string>
+	</dict>
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
