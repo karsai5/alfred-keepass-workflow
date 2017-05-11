@@ -39,7 +39,7 @@ def main(wf):
     if result == 0:
         process.sendline(password)
     else: 
-        wf.add_item("Can't find database, check config.")
+        wf.add_item("Can't find your database.", "Make sure to set it with \"pass-set-dblocation <dblocation>\"")
         wf.send_feedback()
         sys.exit()
 
@@ -48,8 +48,7 @@ def main(wf):
     if result == 0:
         process.sendline("find " + args[0].replace(" ", "\ "))
     else:
-        wf.add_item("Couldn't access database")
-        wf.add_item("Check config and password")
+        wf.add_item("Couldn't open the database.", "Make sure you have set your password with \"pass-set-password <passowrd>\".")
         wf.send_feedback()
         sys.exit()
 
