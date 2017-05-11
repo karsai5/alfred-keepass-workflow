@@ -470,7 +470,7 @@ end alfred_script</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Note that keychain will require to to authorise access, click "always allow" when prompted</string>
+				<string>Password stored in keychain</string>
 				<key>title</key>
 				<string>Keepass master password updated</string>
 			</dict>

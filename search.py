@@ -23,10 +23,7 @@ def main(wf):
         password = wf.get_password(KEYCHAIN_NAME)
     except Exception as e:
         wf.save_password(KEYCHAIN_NAME, 'password') 
-        wf.add_item("Password not found")
-        wf.add_item("Open up keychain")
-        wf.add_item("Search for %s" % KEYCHAIN_NAME )
-        wf.add_item("Update your password")
+        wf.add_item("Password not found.", "Update your password with \"pass-set-password <masterpassword>\"")
         wf.send_feedback()
         sys.exit()
 
