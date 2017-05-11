@@ -28,6 +28,7 @@ def main(wf):
         wf.add_item("Search for %s" % KEYCHAIN_NAME )
         wf.add_item("Update your password")
         wf.send_feedback()
+        sys.exit()
 
     process = pexpect.spawn(kpcliCommand)
 
