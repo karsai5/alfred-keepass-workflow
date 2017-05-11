@@ -1,4 +1,0 @@
-#!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo $DIR
-PERL5LIB="$DIR/../libexec/lib:$DIR/../libexec/lib/perl5" exec "$DIR/../libexec/kpcli" "$@"
