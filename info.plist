@@ -47,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>18BD1C00-BE7D-416C-A6C2-3DE75D3E0F24</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D5F83123-ACE0-46BF-8372-D42A6799E696</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>26B971E7-1202-4CC4-B7D7-5C70F289F419</key>
 		<array>
 			<dict>
@@ -65,6 +78,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>441220A6-FF2C-4489-8559-D61944E50D83</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>30141BFE-644E-4F74-8EB0-DB1120AF7561</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>18BD1C00-BE7D-416C-A6C2-3DE75D3E0F24</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -143,6 +169,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>0DB6B6DE-5C65-4A52-A4F4-E615C0924FD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BD983E88-C2D7-449B-9240-6BD2C53755BB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>30141BFE-644E-4F74-8EB0-DB1120AF7561</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D5F83123-ACE0-46BF-8372-D42A6799E696</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4F89D696-C8CE-4584-9E43-F00B48E56D8F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -322,6 +374,27 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Note it sometimes takes up to 10 seconds for alfred to notice this change...</string>
+				<key>title</key>
+				<string>Keepass DB Location Updated</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C83C8F52-2513-4C3E-895B-790BBDB09745</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -366,40 +439,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Note it sometimes takes up to 10 seconds for alfred to notice this change...</string>
-				<key>title</key>
-				<string>Keepass DB Location Updated</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>C83C8F52-2513-4C3E-895B-790BBDB09745</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.transform</string>
-			<key>uid</key>
-			<string>295B8FDB-D596-4CDE-9E4F-0841393BFF91</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{query}
 </string>
@@ -419,21 +458,110 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>295B8FDB-D596-4CDE-9E4F-0841393BFF91</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Note it sometimes takes up to 10 seconds for alfred to notice this change...</string>
+				<key>title</key>
+				<string>Keepass Keyfile Location Updated</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4F89D696-C8CE-4584-9E43-F00B48E56D8F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/libexec/PlistBuddy -c "Set :variables:keyfile \"{query}\"" info.plist</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D5F83123-ACE0-46BF-8372-D42A6799E696</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>pass-set-password</string>
+				<string>pass-set-keyfile</string>
 				<key>subtext</key>
-				<string>Update your master password</string>
+				<string>Enter the location of your keepass keyfile</string>
 				<key>text</key>
-				<string>Set Keepass Password</string>
+				<string>Set Keepass Keyfile</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>56D6FA6C-C01B-4F46-A9C7-F5A7221080F9</string>
+			<string>BD983E88-C2D7-449B-9240-6BD2C53755BB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}
+</string>
+				<key>variables</key>
+				<dict>
+					<key>var:keyfile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>30141BFE-644E-4F74-8EB0-DB1120AF7561</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>18BD1C00-BE7D-416C-A6C2-3DE75D3E0F24</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -481,6 +609,27 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>pass-set-password</string>
+				<key>subtext</key>
+				<string>Update your master password</string>
+				<key>text</key>
+				<string>Set Keepass Password</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>56D6FA6C-C01B-4F46-A9C7-F5A7221080F9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Keepass is an open source password manager format. This application uses kpcli (a command line application) to directly type passwords into your browser.</string>
@@ -516,12 +665,19 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>130</integer>
 		</dict>
+		<key>18BD1C00-BE7D-416C-A6C2-3DE75D3E0F24</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>560</integer>
+		</dict>
 		<key>26B971E7-1202-4CC4-B7D7-5C70F289F419</key>
 		<dict>
 			<key>xpos</key>
 			<integer>310</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>660</integer>
 		</dict>
 		<key>295B8FDB-D596-4CDE-9E4F-0841393BFF91</key>
 		<dict>
@@ -529,6 +685,13 @@ end alfred_script</string>
 			<integer>410</integer>
 			<key>ypos</key>
 			<integer>430</integer>
+		</dict>
+		<key>30141BFE-644E-4F74-8EB0-DB1120AF7561</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>560</integer>
 		</dict>
 		<key>441220A6-FF2C-4489-8559-D61944E50D83</key>
 		<dict>
@@ -544,12 +707,19 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>200</integer>
 		</dict>
+		<key>4F89D696-C8CE-4584-9E43-F00B48E56D8F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>710</integer>
+			<key>ypos</key>
+			<integer>530</integer>
+		</dict>
 		<key>56D6FA6C-C01B-4F46-A9C7-F5A7221080F9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>100</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>660</integer>
 		</dict>
 		<key>773C1EF6-D4A2-4D97-AB5F-C19BCA82ABED</key>
 		<dict>
@@ -579,27 +749,37 @@ end alfred_script</string>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
+		<key>BD983E88-C2D7-449B-9240-6BD2C53755BB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>530</integer>
+		</dict>
 		<key>C83C8F52-2513-4C3E-895B-790BBDB09745</key>
 		<dict>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>710</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>400</integer>
+		</dict>
+		<key>D5F83123-ACE0-46BF-8372-D42A6799E696</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>530</integer>
 		</dict>
 		<key>F4C2E16A-9E97-499C-80A5-00664358E3F6</key>
 		<dict>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>660</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>dblocation</key>
-		<string>/Users/lkarsai/Documents/thoughtworks.kdbx</string>
-		<key>keychain_name</key>
-		<string>alfred-keepass-pass</string>
 	</dict>
 	<key>version</key>
 	<string>1.0</string>

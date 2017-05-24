@@ -14,11 +14,14 @@ from workflow import Variables
 DEBUG = False
 DBLOCATION = os.getenv('dblocation', 'default_value')
 KEYCHAIN_NAME = os.getenv('keychain_name', 'alfred-keepass-pass')
+KEYFILE_LOCATION = os.getenv('keyfile', '')
 
 def main(wf):
 
     args = wf.args
     kpcliCommand= "./kpcli/bin/kpcli --kdb " + DBLOCATION
+    if KEYFILE_LOCATION is not '':
+        kpcliCommand = kpcliCommand + " --key " + KEYFILE_LOCATION
     try:
         password = wf.get_password(KEYCHAIN_NAME)
     except Exception as e:
