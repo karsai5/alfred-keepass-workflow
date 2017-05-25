@@ -14,6 +14,8 @@ Alfred workflow for accessing Keepass items.
 ![Set database location](https://github.com/karsai5/KeePass-Alfred-Workflow/blob/images/set-db.png?raw=true)
 4. Set your master password by typing pass-set-password <password> into Alfred.
 ![Set master password](https://github.com/karsai5/KeePass-Alfred-Workflow/blob/images/set-password.png?raw=true)
+5. (Optional) Set your keyfile location by typing "pass-set-keyfile <keyfile location>" into Alfred.
+![Set keyfile location](https://github.com/karsai5/KeePass-Alfred-Workflow/blob/images/set-keyfile.png?raw=true)
 
 ## Lots of thanks!
 This project wouldn't be possible without the following:
