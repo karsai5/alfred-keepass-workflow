@@ -63,10 +63,10 @@ def main(wf):
         process.expect("kpcli:/>")
         for line in process.before.split("\n"):
             if re.match("[0-9]\.", line):
-                name = ".".join(line.split(".")[1:]).strip()
-                itemNames.append(name)
+                itemNumber = line.split('.')[0]
+                itemNames.append(itemNumber)
         for name in itemNames:
-            process.sendline("show /_found/" + name.replace(" ", "\ "))
+            process.sendline("show %s" % name)
             process.expect("kpcli:/>")
             addItemDetails(process)
 

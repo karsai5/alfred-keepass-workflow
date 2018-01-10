@@ -780,9 +780,20 @@ end alfred_script</string>
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>dblocation</key>
+		<string></string>
+		<key>keychain_name</key>
+		<string></string>
+		<key>keyfile</key>
+		<string></string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>keyfile</string>
+		<string>dblocation</string>
+	</array>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>linusk.com.au</string>
 </dict>
