@@ -16,30 +16,34 @@ DBLOCATION = os.getenv('dblocation', 'default_value')
 KEYCHAIN_NAME = os.getenv('keychain_name', 'alfred-keepass-pass')
 KEYFILE_LOCATION = os.getenv('keyfile', '')
 
+
 def main(wf):
 
     args = wf.args
-    kpcliCommand= "./kpcli/bin/kpcli --kdb " + DBLOCATION
+    kpcliCommand = "./kpcli/bin/kpcli --kdb \"%s\"" % DBLOCATION
     if KEYFILE_LOCATION is not '':
-        kpcliCommand = kpcliCommand + " --key " + KEYFILE_LOCATION
+        kpcliCommand =  "%s --key \"%s\"" % (kpcliCommand, KEYFILE_LOCATION)
     try:
         password = wf.get_password(KEYCHAIN_NAME)
     except Exception as e:
-        wf.save_password(KEYCHAIN_NAME, 'password') 
-        wf.add_item("Password not found.", "Update your password with \"pass-set-password <masterpassword>\"")
+        wf.save_password(KEYCHAIN_NAME, 'password')
+        wf.add_item("Password not found.",
+                    "Update your password with \"pass-set-password <masterpassword>\"")
         wf.send_feedback()
         sys.exit()
 
     process = pexpect.spawn(kpcliCommand)
 
-    if DEBUG: 
+    if DEBUG:
         process.logfile = open("/tmp/mylog", "w")
 
-    result = process.expect(["Please provide the master password", "the file must exist", pexpect.EOF])
+    result = process.expect(
+        ["Please provide the master password", "the file must exist", pexpect.EOF])
     if result == 0:
         process.sendline(password)
-    else: 
-        wf.add_item("Can't find your database.", "Make sure to set it with \"pass-set-dblocation <dblocation>\"")
+    else:
+        wf.add_item("Can't find your database.",
+                    "Make sure to set it with \"pass-set-dblocation <dblocation>\"")
         wf.send_feedback()
         sys.exit()
 
@@ -48,7 +52,8 @@ def main(wf):
     if result == 0:
         process.sendline("find " + args[0].replace(" ", "\ "))
     else:
-        wf.add_item("Couldn't open the database.", "Make sure you have set your password with \"pass-set-password <passowrd>\".")
+        wf.add_item("Couldn't open the database.",
+                    "Make sure you have set your password with \"pass-set-password <passowrd>\".")
         wf.send_feedback()
         sys.exit()
 
@@ -76,14 +81,16 @@ def main(wf):
 
     wf.send_feedback()
 
+
 def addSingleItem(process):
-        process.sendline("y")
-        process.expect("kpcli:/>")
-        addItemDetails(process)
+    process.sendline("y")
+    process.expect("kpcli:/>")
+    addItemDetails(process)
+
 
 def addItemDetails(process):
-    name= ""
-    path= ""
+    name = ""
+    path = ""
     username = ""
     argument = ""
     password = ""
@@ -99,12 +106,14 @@ def addItemDetails(process):
     process.sendline("show -f " + argument.replace(" ", "\ "))
 
     process.expect("kpcli:/>")
-    
+
     for line in process.before.split("\n"):
         if "Pass" in line:
             password = ":".join(line.split(":")[1:]).strip()
 
-    wf.add_item(title=name, subtitle="Username: " + username, copytext=password, largetext=password, arg = password, valid=True)
+    wf.add_item(title=name, subtitle="Username: " + username,
+                copytext=password, largetext=password, arg=password, valid=True)
+
 
 if __name__ == u"__main__":
     wf = Workflow3()
