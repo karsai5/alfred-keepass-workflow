@@ -1,10 +1,10 @@
-=head2 Wed Sep 28 20:41:41 2016: C<Module> L<File::KeePass|File::KeePass>
+=head2 Tue Oct 15 22:41:13 2019: C<Module> L<File::KeePass|File::KeePass>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -20,13 +20,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:42 2016: C<Module> L<Crypt::Rijndael|Crypt::Rijndael>
+=head2 Tue Oct 15 22:41:14 2019: C<Module> L<Crypt::Rijndael|Crypt::Rijndael>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -42,13 +42,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:42 2016: C<Module> L<Sort::Naturally|Sort::Naturally>
+=head2 Tue Oct 15 22:41:15 2019: C<Module> L<Sort::Naturally|Sort::Naturally>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -64,13 +64,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:43 2016: C<Module> L<Term::ShellUI|Term::ShellUI>
+=head2 Tue Oct 15 22:41:15 2019: C<Module> L<Term::ShellUI|Term::ShellUI>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -86,13 +86,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:43 2016: C<Module> L<Data::Password|Data::Password>
+=head2 Tue Oct 15 22:41:16 2019: C<Module> L<Data::Password|Data::Password>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -108,13 +108,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:44 2016: C<Module> L<Clipboard|Clipboard>
+=head2 Tue Oct 15 22:41:17 2019: C<Module> L<Clipboard|Clipboard>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -130,13 +130,13 @@ C<EXE_FILES: scripts/clipjoin scripts/clipedit scripts/clipbrowse scripts/clipac
 
 =back
 
-=head2 Wed Sep 28 20:41:46 2016: C<Module> L<Mac::Pasteboard|Mac::Pasteboard>
+=head2 Tue Oct 15 22:41:19 2019: C<Module> L<Mac::Pasteboard|Mac::Pasteboard>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -144,21 +144,21 @@ C<LINKTYPE: dynamic>
 
 =item *
 
-C<VERSION: 0.008>
+C<VERSION: 0.009>
 
 =item *
 
-C<EXE_FILES: bin/pbtool>
+C<EXE_FILES: script/pbtool>
 
 =back
 
-=head2 Wed Sep 28 20:41:47 2016: C<Module> L<Capture::Tiny|Capture::Tiny>
+=head2 Tue Oct 15 22:41:20 2019: C<Module> L<Capture::Tiny|Capture::Tiny>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -166,7 +166,7 @@ C<LINKTYPE: dynamic>
 
 =item *
 
-C<VERSION: 0.44>
+C<VERSION: 0.46>
 
 =item *
 
@@ -174,13 +174,13 @@ C<EXE_FILES: >
 
 =back
 
-=head2 Wed Sep 28 20:41:50 2016: C<Module> L<Term::ReadLine::Gnu|Term::ReadLine::Gnu>
+=head2 Tue Oct 15 22:41:23 2019: C<Module> L<Term::ReadLine::Gnu|Term::ReadLine::Gnu>
 
 =over 4
 
 =item *
 
-C<installed into: /usr/local/Cellar/kpcli/3.1_1/libexec/lib/perl5>
+C<installed into: /usr/local/Cellar/kpcli/3.3/libexec/lib/perl5>
 
 =item *
 
@@ -188,7 +188,7 @@ C<LINKTYPE: dynamic>
 
 =item *
 
-C<VERSION: 1.34>
+C<VERSION: 1.35>
 
 =item *
 

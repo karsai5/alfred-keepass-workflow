@@ -1,7 +1,7 @@
 #
 #	Gnu.pm --- The GNU Readline/History Library wrapper module
 #
-#	$Id: Gnu.pm 552 2016-06-12 14:48:40Z hayashi $
+#	$Id: Gnu.pm 556 2016-11-03 14:24:45Z hayashi $
 #
 #	Copyright (c) 1996-2016 Hiroo Hayashi.  All rights reserved.
 #
@@ -85,7 +85,7 @@ END
     use Exporter ();
     use DynaLoader;
 
-    our $VERSION = '1.34';		# update Gnu::XS::VERSION also.
+    our $VERSION = '1.35';		# update Gnu::XS::VERSION also.
 
     # Term::ReadLine::Gnu::AU makes a function in
     # `Term::ReadLine::Gnu::XS' as a method.
@@ -666,7 +666,8 @@ our %_rl_vars;
        rl_executing_key				=> ['I', 41], # GRL 6.3
        rl_key_sequence_length			=> ['I', 42], # GRL 6.3
        rl_change_environment			=> ['I', 43], # GRL 6.3
-       utf8_mode				=> ['I', 44], # internal
+       rl_persistent_signal_handlers		=> ['I', 44], # GRL 7.0
+       utf8_mode				=> ['I', 45], # internal
 
        rl_startup_hook				=> ['F', 0],
        rl_event_hook				=> ['F', 1],
@@ -1134,6 +1135,10 @@ Manual|http://cnswww.cns.cwru.edu/php/chet/readline/readline.html>.
 
 	int	rl_on_new_line_with_prompt()			# GRL 4.1
 
+=item C<clear_visible_line()>
+
+	int	rl_clear_visible_line()				# GRL 7.0
+
 =item C<reset_line_state>
 
 	int	rl_reset_line_state()
@@ -1247,6 +1252,10 @@ Manual|http://cnswww.cns.cwru.edu/php/chet/readline/readline.html>.
 =item C<tty_unset_default_bindings([MAP])>
 
 	void	rl_tty_unset_default_bindings([Keymap|str map = rl_get_keymap()]) # GRL 5.0
+
+=item C<tty_set_echoing(VALUE)>
+
+	int	rl_tty_set_echoing(int value)			# GRL 7.0
 
 =item C<reset_terminal([TERMINAL_NAME])>
 
@@ -1366,6 +1375,10 @@ When C<MAX> is omitted, the max length of an item in C<@matches> is used.
 =head3 Readline Signal Handling
 
 =over 4
+
+=item C<pending_signal()>
+
+	int	rl_pending_signal()				# GRL 7.0
 
 =item C<cleanup_after_signal>
 
@@ -1719,6 +1732,7 @@ Examples:
 
 	int rl_catch_signals (GRL 4.0)
 	int rl_catch_sigwinch (GRL 4.0)
+	int rl_persistent_signal_handlers (GRL 7.0)
 	int rl_change_environment (GRL 6.3)
 
 =head3 Completion Variables
