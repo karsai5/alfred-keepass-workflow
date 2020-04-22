@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "Capture::Tiny 3"
-.TH Capture::Tiny 3 "2016-08-05" "perl v5.18.2" "User Contributed Perl Documentation"
+.TH Capture::Tiny 3 "2017-02-25" "perl v5.18.4" "User Contributed Perl Documentation"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -142,7 +142,7 @@
 Capture::Tiny \- Capture STDOUT and STDERR from Perl, XS or external programs
 .SH "VERSION"
 .IX Header "VERSION"
-version 0.44
+version 0.46
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
 .Vb 1
@@ -430,6 +430,13 @@ capture, it will shortcut in the child process and return empty strings for
 captures.  Other problems may occur in the child or parent, as well.
 Forking in a capture block is not recommended.
 .PP
+\fIUsing threads\fR
+.IX Subsection "Using threads"
+.PP
+Filehandles are global.  Mixing up I/O and captures in different threads
+without coordination is going to cause problems.  Besides, threads are
+officially discouraged.
+.PP
 \fIDropping privileges during a capture\fR
 .IX Subsection "Dropping privileges during a capture"
 .PP
@@ -536,6 +543,8 @@ Dagfinn Ilmari Mannsa\*oker <ilmari@ilmari.org>
 David E. Wheeler <david@justatheory.com>
 .IP "\(bu" 4
 fecundf <not.com+github@gmail.com>
+.IP "\(bu" 4
+Graham Knop <haarg@haarg.org>
 .IP "\(bu" 4
 Peter Rabbitson <ribasushi@cpan.org>
 .SH "COPYRIGHT AND LICENSE"

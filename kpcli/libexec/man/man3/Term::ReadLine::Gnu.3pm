@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "Gnu 3"
-.TH Gnu 3 "2016-06-12" "perl v5.18.2" "User Contributed Perl Documentation"
+.TH Gnu 3 "2016-11-03" "perl v5.18.4" "User Contributed Perl Documentation"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -643,6 +643,12 @@ Redisplay
 .Vb 1
 \&        int     rl_on_new_line_with_prompt()                    # GRL 4.1
 .Ve
+.ie n .IP """clear_visible_line()""" 4
+.el .IP "\f(CWclear_visible_line()\fR" 4
+.IX Item "clear_visible_line()"
+.Vb 1
+\&        int     rl_clear_visible_line()                         # GRL 7.0
+.Ve
 .ie n .IP """reset_line_state""" 4
 .el .IP "\f(CWreset_line_state\fR" 4
 .IX Item "reset_line_state"
@@ -796,6 +802,12 @@ Terminal Management
 .Vb 1
 \&        void    rl_tty_unset_default_bindings([Keymap|str map = rl_get_keymap()]) # GRL 5.0
 .Ve
+.ie n .IP """tty_set_echoing(VALUE)""" 4
+.el .IP "\f(CWtty_set_echoing(VALUE)\fR" 4
+.IX Item "tty_set_echoing(VALUE)"
+.Vb 1
+\&        int     rl_tty_set_echoing(int value)                   # GRL 7.0
+.Ve
 .ie n .IP """reset_terminal([TERMINAL_NAME])""" 4
 .el .IP "\f(CWreset_terminal([TERMINAL_NAME])\fR" 4
 .IX Item "reset_terminal([TERMINAL_NAME])"
@@ -947,6 +959,12 @@ Alternate Interface
 .PP
 \fIReadline Signal Handling\fR
 .IX Subsection "Readline Signal Handling"
+.ie n .IP """pending_signal()""" 4
+.el .IP "\f(CWpending_signal()\fR" 4
+.IX Item "pending_signal()"
+.Vb 1
+\&        int     rl_pending_signal()                             # GRL 7.0
+.Ve
 .ie n .IP """cleanup_after_signal""" 4
 .el .IP "\f(CWcleanup_after_signal\fR" 4
 .IX Item "cleanup_after_signal"
@@ -1374,9 +1392,10 @@ Examples:
 \fISignal Handling Variables\fR
 .IX Subsection "Signal Handling Variables"
 .PP
-.Vb 3
+.Vb 4
 \&        int rl_catch_signals (GRL 4.0)
 \&        int rl_catch_sigwinch (GRL 4.0)
+\&        int rl_persistent_signal_handlers (GRL 7.0)
 \&        int rl_change_environment (GRL 6.3)
 .Ve
 .PP

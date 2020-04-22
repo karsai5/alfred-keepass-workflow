@@ -11,7 +11,7 @@ import json
 from workflow import Workflow3, ICON_WEB, web
 from workflow import Variables
 
-DEBUG = False
+DEBUG = True
 DBLOCATION = os.getenv('dblocation', 'default_value')
 KEYCHAIN_NAME = os.getenv('keychain_name', 'alfred-keepass-pass')
 KEYFILE_LOCATION = os.getenv('keyfile', '')
@@ -35,7 +35,7 @@ def main(wf):
     process = pexpect.spawn(kpcliCommand)
 
     if DEBUG:
-        process.logfile = open("/tmp/mylog", "w")
+        process.logfile = open("/tmp/keepass_alfred_workflow.log", "w")
 
     result = process.expect(
         ["Please provide the master password", "the file must exist", pexpect.EOF])

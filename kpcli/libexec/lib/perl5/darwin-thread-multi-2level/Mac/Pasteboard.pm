@@ -1,6 +1,6 @@
 package Mac::Pasteboard;
 
-use 5.006000;
+use 5.006002;
 
 use strict;
 use warnings;
@@ -12,7 +12,7 @@ BEGIN {
     $ENV{DEVELOPER_DEBUG} and Carp->import ('verbose');
 }
 
-use base qw{ Exporter };
+use Exporter qw{ import };
 
 {
     my @const = qw{
@@ -49,7 +49,7 @@ use base qw{ Exporter };
     our @EXPORT = @funcs;	## no critic (ProhibitAutomaticExportation)
 }
 
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 our $XS_VERSION = $VERSION;
 our $ALPHA_VERSION = $VERSION;
 $VERSION =~ s/_//g;
@@ -1130,7 +1130,7 @@ Thomas R. Wyant, III, F<wyant at cpan dot org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2008, 2011-2016 by Thomas R. Wyant, III
+Copyright (C) 2008, 2011-2017 by Thomas R. Wyant, III
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl 5.10.0. For more details, see the full text
